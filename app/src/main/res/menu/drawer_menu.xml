@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home"/>
+
+        <item android:id="@+id/nav_history"
+            android:icon="@drawable/ic_baseline_history_24"
+            android:title="Previous Months"/>
+
+        <item android:id="@+id/nav_savings"
+            android:icon="@drawable/ic_baseline_savings_24"
+            android:title="Savings"/>
+
+    </group>
+
+    <item android:title="Add recurring, monthly transfers">
+
+        <menu>
+
+            <item android:id="@+id/nav_income"
+                android:icon="@drawable/income_icon"
+                android:title="Income"/>
+
+            <item android:id="@+id/nav_expenses"
+                android:icon="@drawable/expenses_icon"
+                android:title="Expenses"/>
+
+        </menu>
+
+    </item>
+
+    <item tools:ignore="MenuTitle">
+
+        <menu>
+
+            <item android:id="@+id/nav_help_and_feedback"
+                android:title="Help &amp; Feedback"/>
+            <item android:id="@+id/nav_about"
+                android:title="About Quicky"/>
+
+        </menu>
+
+    </item>
+
+</menu>

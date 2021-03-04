@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="textsize_available_textview_homefragment_more_than_one_million">17sp</dimen>
+    <dimen name="textsize_pending_stuff_tv_more_t_1_million">11sp</dimen>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.TabsFont" parent="android:TextAppearance">
+        <item name="android:fontFamily">@font/gothic_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">@color/dark_blue_main_theme</item>
+    </style>
+</resources>

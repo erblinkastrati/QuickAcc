@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardviewInAddSavingADId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardCornerRadius="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue_main_theme">
+
+
+
+        <RelativeLayout
+            android:id="@+id/rellayoutfordialogaddsavingid"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/addtvid"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gothic_regular"
+                android:gravity="center"
+                android:layout_toStartOf="@id/savingTextViewID"
+                android:text="add"
+                android:textColor="@color/dark_blue_main_theme"
+                android:textSize="25sp"
+                android:layout_marginEnd="5dp"/>
+
+            <TextView
+                android:id="@+id/savingTextViewID"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:elevation="3dp"
+
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/gothic_bold"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="saving"
+                android:textColor="@color/dark_blue_main_theme"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/addSavingDialogEditTextID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:fontFamily="@font/gothic_bold"
+            android:textColorHint="@color/dark_blue_main_theme"
+            android:textColor="@color/savings_orange"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_below="@id/rellayoutfordialogaddsavingid"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/addSavingNotesDialogEditTextID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="what type of saving is this?"
+            android:inputType="textShortMessage"
+            android:fontFamily="@font/gothic_italic"
+            android:textColorHint="@color/dark_blue_main_theme"
+            android:textColor="@color/savings_orange"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_below="@id/addSavingDialogEditTextID"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"/>
+
+
+        <Button
+            android:id="@+id/addSavingButtonInDialogID"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/savings_orange"
+            android:fontFamily="@font/gothic_bold"
+            android:text="add"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:layout_below="@id/addSavingNotesDialogEditTextID"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

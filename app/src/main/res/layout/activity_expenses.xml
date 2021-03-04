@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_main_theme"
+    tools:context=".ExpensesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarInAddExpenseID"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/light_blue_main_theme"
+            app:popupTheme="@style/Theme.AppCompat.Light"
+            android:theme="@style/ToolbarTheme"
+            app:titleTextAppearance="@style/TextAppearance.TabsFont"
+            android:elevation="4dp">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- CONTENT BELOW TOOLBAR -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- top card with total rec. expenses -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewTotalExpenseID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/deficit_red"
+                android:translationZ="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:id="@+id/totalExpensesTextViewID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2634.00"
+                        android:fontFamily="@font/gothic_bold"
+                        android:textSize="55sp"
+                        android:gravity="center"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                    <TextView
+                        android:id="@+id/toexTvid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@id/totalExpensesTextViewID"
+                        android:fontFamily="@font/century_gothic"
+                        android:gravity="center"
+                        android:text="to - spend"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardviewRecyclerViewInAddExpenseID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardviewTotalExpenseID"
+                android:layout_above="@id/cardViewOverButtonInExpense"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="-20dp"
+                android:paddingTop="20dp"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/light_blue_main_theme"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerViewInAddExpenseID"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scrollbars="none"
+                        android:overScrollMode="never"
+                        android:paddingTop="10dp"
+                        android:paddingStart="30dp"
+                        android:paddingEnd="30dp"
+                        android:background="@color/light_blue_main_theme"/>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewOverButtonInExpense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/deficit_red"
+                app:cardCornerRadius="20dp">
+
+                <Button
+                    android:id="@+id/addRecurringExpenseToDbViewButtonID"
+                    android:text="new expense"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="-5dp"
+                    android:padding="15dp"
+                    android:backgroundTint="@color/deficit_red"
+                    android:fontFamily="@font/gothic_bold"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    style="?android:attr/borderlessButtonStyle"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

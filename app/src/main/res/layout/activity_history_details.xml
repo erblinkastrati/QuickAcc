@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecyclerViewHistoryFragment.HistoryDetails">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarInHistoryDetailsID"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/light_blue_main_theme"
+        app:popupTheme="@style/Theme.AppCompat.Light"
+        android:theme="@style/ToolbarTheme"
+        app:titleTextAppearance="@style/TextAppearance.TabsFont"
+        android:elevation="4dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewTitleInHistoryDetailsId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/dark_blue_main_theme"
+        android:layout_below="@id/toolbarInHistoryDetailsID"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/historyDetailsMonthTitleId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="September"
+                android:gravity="start"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_bold"
+                android:textColor="@color/light_blue_main_theme"
+                android:layout_toStartOf="@id/endAmountOfCertainMonthInHistoryId"/>
+
+
+            <TextView
+                android:id="@+id/historyDetailsYearTitleId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/historyDetailsMonthTitleId"
+                android:text="2010"
+                android:layout_marginTop="5dp"
+                android:gravity="start"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_italic"
+                android:textColor="@color/light_blue_main_theme"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/endAmountOfCertainMonthInHistoryId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="+ 6758€"
+                android:textSize="25sp"
+                android:textColor="@color/light_blue_main_theme"
+                android:fontFamily="@font/gothic_regular"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ScrollView
+        android:id="@+id/scrollViewHistoryId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardViewTitleInHistoryDetailsId"
+        android:overScrollMode="never"
+        android:layout_marginTop="-20dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutInHistoryItemInScollHistoryId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/incomeTitleHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="All Income"
+                android:layout_marginTop="20dp"
+                android:paddingTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_bold"
+                android:textColor="@color/surplus_green"/>
+
+            <TextView
+                android:id="@+id/incomeAmountHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/incomeTitleHistoryId"
+                android:text="25000€"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_regular"
+                android:textColor="@color/surplus_green"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewIncomeInHistoryId"
+                android:layout_below="@id/incomeAmountHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/expenseTitleHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewIncomeInHistoryId"
+                android:text="All Expenses"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_bold"
+                android:textColor="@color/deficit_red"/>
+
+            <TextView
+                android:id="@+id/expenseAmountHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expenseTitleHistoryId"
+                android:text="12353€"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_regular"
+                android:textColor="@color/deficit_red"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewExpenseInHistoryId"
+                android:layout_below="@id/expenseAmountHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/savingTitleHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerViewExpenseInHistoryId"
+                android:text="All Savings"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_bold"
+                android:textColor="@color/savings_orange"/>
+
+            <TextView
+                android:id="@+id/savingAmountHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/savingTitleHistoryId"
+                android:text="2500€"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/gothic_regular"
+                android:textColor="@color/deficit_red"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewSavingInHistoryId"
+                android:layout_below="@id/savingAmountHistoryId"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:layout_margin="20dp"/>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="@color/light_blue_main_theme"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rellayoutinaddexpenseid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/optionExpenseTextViewID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rent"
+            android:layout_toStartOf="@id/specificExpenseAmountEditTextID"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:fontFamily="@font/gothic_bold"
+            android:textColor="@color/dark_blue_main_theme"/>
+
+
+        <EditText
+            android:id="@+id/specificExpenseAmountEditTextID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/gothic_bold"
+            android:gravity="end"
+            android:hint="500.00"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/dark_blue_main_theme"
+            android:textColor="@color/deficit_red"
+            android:textSize="25sp" />
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

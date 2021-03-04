@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/infoBackgroundCardViewId"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="20dp">
+
+    <ScrollView android:id="@+id/infoScrollView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoAvailableCardviewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/dark_blue_main_theme"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/infoAvailableTVID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="available"
+                        android:fontFamily="@font/gothic_bold_italic"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                    <View
+                        android:id="@+id/separatorAvailableId"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/infoAvailableTVID"
+                        android:background="@color/light_blue_main_theme"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/infoAvailableDescriptionID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/gothic_regular"
+                        android:textSize="15sp"
+                        android:layout_below="@id/separatorAvailableId"
+                        android:text="This card shows how much money you actually have left.\n\nIt deducts all not yet deducted expenses from the sum of the currently available money and the pending income."
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/infoCurrentlyAvailableTvId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoAvailableCardviewId"
+                android:gravity="center"
+                android:text="To see and update your current balance, just tap on the 'current' button."
+                android:textSize="15sp"
+                android:textColor="@color/dark_blue_main_theme"
+                android:fontFamily="@font/gothic_regular"
+                android:layout_margin="20dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoPendingIncomeCardviewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/surplus_green"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_below="@id/infoCurrentlyAvailableTvId"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/infoPendingIncomeTVID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="pending income"
+                        android:fontFamily="@font/gothic_bold_italic"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                    <View
+                        android:id="@+id/separatorpenincomeId"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/infoPendingIncomeTVID"
+                        android:background="@color/light_blue_main_theme"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/infoPendingIncomeDescriptionID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/gothic_regular"
+                        android:textSize="15sp"
+                        android:layout_below="@id/separatorpenincomeId"
+                        android:text="This card shows how much money you will get this month, tap on the 'pending income' button to view and remove pending income"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoPendingExpenseCardviewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/deficit_red"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_below="@id/infoPendingIncomeCardviewId"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/infoPendingExpenseTVID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="pending expense"
+                        android:fontFamily="@font/gothic_bold_italic"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                    <View
+                        android:id="@+id/separatorpenexId"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/infoPendingExpenseTVID"
+                        android:background="@color/light_blue_main_theme"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/infoPendingExpenseDescriptionID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/gothic_regular"
+                        android:textSize="15sp"
+                        android:layout_below="@id/separatorpenexId"
+                        android:text="This card shows how much money will be deducted throughout the month, tap on the 'pending expense' button to view and remove pending expenses"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/infoPendingSavingCardviewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/savings_orange"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_below="@id/infoPendingExpenseCardviewId"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/infoPendingSavingTVID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="pending savings"
+                        android:fontFamily="@font/gothic_bold_italic"
+                        android:textSize="40sp"
+                        android:gravity="center"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                    <View
+                        android:id="@+id/separatorSavingId"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/infoPendingSavingTVID"
+                        android:background="@color/light_blue_main_theme"
+                        android:layout_margin="10dp"/>
+
+                    <TextView
+                        android:id="@+id/infoPendingSavingDescriptionID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/gothic_regular"
+                        android:textSize="15sp"
+                        android:layout_below="@id/separatorSavingId"
+                        android:text="This card shows how much money you decided to put to your savings, tap on the 'to save' button to view and remove pending savings"
+                        android:textColor="@color/light_blue_main_theme"/>
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>
+
+
+

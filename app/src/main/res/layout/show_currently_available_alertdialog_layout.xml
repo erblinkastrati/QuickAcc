@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_blue_main_theme"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewCurrentInCurrentAlertdialogID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/dark_blue_main_theme">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/availableTextViewInCurrentID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:elevation="7dp"
+                    android:text="1159.74"
+                    android:fontFamily="@font/gothic_bold"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue_main_theme"/>
+
+                <TextView
+                    android:id="@+id/avTvid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/availableTextViewInCurrentID"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="center"
+                    android:text="currently available"
+                    android:alpha="0.8"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewBankInCurrentAlertdialogID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="8dp"
+            android:layout_below="@id/cardviewCurrentInCurrentAlertdialogID"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#619FE1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/bankAmountEditTextID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/editBankAmountButtonID"
+                    android:padding="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:elevation="7dp"
+                    android:hint="600.50"
+                    android:inputType="numberDecimal"
+                    android:background="@null"
+                    android:fontFamily="@font/gothic_bold"
+                    android:layout_toEndOf="@id/baTvid"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:textColorHint="@color/light_blue_main_theme"
+                    android:textColor="@color/light_blue_main_theme"/>
+
+                <TextView
+                    android:id="@+id/baTvid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="start"
+                    android:text="Bank"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/editBankAmountButtonID"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/check_icon"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewWalletInCurrentAlertdialogID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="8dp"
+            android:layout_below="@id/cardviewBankInCurrentAlertdialogID"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#619FE1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/walletAmountEditTextID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/editWalletAmountButtonId"
+                    android:padding="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:elevation="7dp"
+                    android:hint="800.97"
+                    android:inputType="numberDecimal"
+                    android:background="@null"
+                    android:fontFamily="@font/gothic_bold"
+                    android:layout_toEndOf="@id/waTvid"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:textColor="@color/light_blue_main_theme"
+                    android:textColorHint="@color/light_blue_main_theme"/>
+
+                <TextView
+                    android:id="@+id/waTvid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="start"
+                    android:text="Wallet"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/editWalletAmountButtonId"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/check_icon"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewOthersInCurrentAlertdialogID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="8dp"
+            android:layout_below="@id/cardviewWalletInCurrentAlertdialogID"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="#619FE1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/othersAmountEditTextID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/editOthersAmountButtonId"
+                    android:padding="5dp"
+                    android:layout_marginEnd="30dp"
+                    android:elevation="7dp"
+                    android:hint="50.67"
+                    android:inputType="numberDecimal"
+                    android:background="@null"
+                    android:fontFamily="@font/gothic_bold"
+                    android:layout_toEndOf="@id/oaTvid"
+                    android:textSize="20sp"
+                    android:gravity="end"
+                    android:textColorHint="@color/light_blue_main_theme"
+                    android:textColor="@color/light_blue_main_theme"/>
+
+                <TextView
+                    android:id="@+id/oaTvid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="start"
+                    android:text="Others"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageButton
+                    android:id="@+id/editOthersAmountButtonId"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/check_icon"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+

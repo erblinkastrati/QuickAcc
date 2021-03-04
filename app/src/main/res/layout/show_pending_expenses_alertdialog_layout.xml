@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardviewPenExpenseInPenExpenseAlertdialogID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardElevation="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/deficit_red">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/pendingExpenseTextViewAlertDialogID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp"
+                    android:elevation="7dp"
+                    android:text="754.00"
+                    android:fontFamily="@font/gothic_bold"
+                    android:textSize="50sp"
+                    android:gravity="center"
+                    android:textColor="@color/light_blue_main_theme"/>
+
+                <TextView
+                    android:id="@+id/penExpenseTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@id/pendingExpenseTextViewAlertDialogID"
+                    android:fontFamily="@font/century_gothic"
+                    android:gravity="center"
+                    android:text="pending expense"
+                    android:alpha="0.8"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewInPenExpenseAlertDialog"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_below="@id/cardviewPenExpenseInPenExpenseAlertdialogID"
+            android:layout_marginTop="-20dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

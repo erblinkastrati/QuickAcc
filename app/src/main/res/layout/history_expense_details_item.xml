@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:id="@+id/realLayoutInHistoryDetailsId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/itemNameInHistoryDetailsId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Some Dope Shit"
+            android:textSize="15sp"
+            android:fontFamily="@font/gothic_regular"
+            android:textColor="@color/dark_blue_main_theme"
+            android:layout_toStartOf="@id/itemAmountInHistoryDetailsId"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/timeAndDateStampInHistoryDetailsId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Added on 01.01.2010"
+            android:layout_below="@id/itemNameInHistoryDetailsId"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="-15dp"
+            android:fontFamily="@font/gothic_italic"
+            android:textColor="@color/dark_blue_main_theme"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/itemAmountInHistoryDetailsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15.94€"
+            android:fontFamily="@font/gothic_bold"
+            android:textSize="15sp"
+            android:textColor="@color/dark_blue_main_theme"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="20dp"/>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

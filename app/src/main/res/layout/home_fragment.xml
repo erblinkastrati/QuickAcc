@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayoutInHomeFragmentID"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_main_theme"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/dimmBackgroundID"
+        android:background="#000000"
+        android:translationZ="9dp"
+        android:visibility="invisible"
+        android:alpha="0.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewAvailableID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="15dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/dark_blue_main_theme">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/availableTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:elevation="7dp"
+                android:text="55.74"
+                android:fontFamily="@font/gothic_bold"
+                android:textSize="65sp"
+                android:gravity="center"
+                android:textColor="@color/light_blue_main_theme"/>
+
+            <TextView
+                android:id="@+id/avTvid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/availableTextViewID"
+                android:fontFamily="@font/century_gothic"
+                android:gravity="center"
+                android:text="a  v  a  i  l  a  b  l  e"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollViewInHomeID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardviewAvailableID"
+        android:layout_marginTop="-25dp"
+        android:paddingTop="15dp"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutInSccrollViewInHomeFragmentId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/currentTextViewID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:elevation="7dp"
+                android:shadowColor="@color/light_blue_main_theme"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="27"
+                android:gravity="center"
+                android:text="1159.74"
+                android:textSize="44sp"
+                android:fontFamily="@font/gothic_bold"
+                android:layout_marginTop="30dp"
+                android:textColor="@color/dark_blue_main_theme"/>
+
+            <Button
+                android:id="@+id/currentButtonInHomeFragmentID"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currentTextViewID"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:text="c u r r e n t"
+                android:textAllCaps="false"
+                android:textSize="11sp"
+                android:fontFamily="@font/gothic_bold"
+                android:textColor="@color/white"/>
+
+            <View
+                android:id="@+id/horCenterSeparator"
+                android:layout_width="0.01dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pendingIncomeCardViewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/currentButtonInHomeFragmentID"
+                app:cardCornerRadius="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:backgroundTint="#004A0F"
+                android:layout_marginTop="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pendingIncomeTextViewID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:elevation="7dp"
+                        android:text="15 152.00"
+                        android:fontFamily="@font/gothic_bold"
+                        android:textSize="43sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:id="@+id/pendingIncomeButtonInHomeFragmentId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/pendingIncomeTextViewID"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30sp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:text="pending income"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/gothic_bold"
+                        android:backgroundTint="@color/light_blue_main_theme"
+                        android:foreground="@drawable/green_ripple"
+                        android:textColor="@color/surplus_green" />
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pendExpenseCardViewId"
+                android:layout_below="@id/pendingIncomeCardViewId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/deficit_red"
+                app:cardCornerRadius="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/pendingExpenseTextViewID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/gothic_bold"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="754.00"
+                        android:textColor="@color/white"
+                        android:background="#771723"
+                        android:textSize="43sp" />
+
+                    <Button
+                        android:id="@+id/pendingExpensesButtonInHomeFragmentId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/pendingExpenseTextViewID"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30sp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center"
+                        android:textAllCaps="false"
+                        android:text="pending expenses"
+                        android:backgroundTint="@color/light_blue_main_theme"
+                        android:foreground="@drawable/red_ripple"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/gothic_bold"
+                        android:textColor="@color/deficit_red" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/savingsCardviewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pendExpenseCardViewId"
+                android:backgroundTint="#B64003"
+                app:cardCornerRadius="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/savingsTextViewID"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp"
+                        android:text="200.00"
+                        android:fontFamily="@font/gothic_bold"
+                        android:textSize="43sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Button
+                        android:id="@+id/pendingSavingsButtonInHomeFragmentId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/savingsTextViewID"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30sp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="to save"
+                        android:textAllCaps="false"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/light_blue_main_theme"
+                        android:foreground="@drawable/orange_ripple"
+                        android:fontFamily="@font/gothic_bold"
+                        android:textColor="@color/savings_orange"/>
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fabSpeedDialFrameLayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="10dp">
+
+        <io.github.yavski.fabspeeddial.FabSpeedDial
+            android:id="@+id/fabSpeedDialInHomeFragmentID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="0dp"
+            android:padding="16dp"
+            app:fabBackgroundTint="@color/dark_blue_main_theme"
+            app:fabGravity="bottom_end"
+            app:fabMenu="@menu/fab_menu"
+            app:miniFabBackgroundTintList="@array/fab_menu_item_colors"
+            app:miniFabDrawableTint="@color/white"
+            app:miniFabTitleTextColorList="@array/fab_menu_item_colors" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

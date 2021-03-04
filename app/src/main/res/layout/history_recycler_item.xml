@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutInHistoryItemId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/monthNumberTextViewId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:text="12"
+            android:textSize="30sp"
+            android:padding="20dp"
+            android:fontFamily="@font/gothic_bold"
+            android:gravity="center"
+            android:textColor="@color/dark_blue_main_theme"/>
+
+        <TextView
+            android:id="@+id/monthNameTextViewId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/monthNumberTextViewId"
+            android:layout_toStartOf="@id/yearTextViewHistoryId"
+            android:layout_centerVertical="true"
+            android:text="December"
+            android:fontFamily="@font/gothic_regular"
+            android:textSize="30sp"
+            android:textColor="@color/dark_blue_main_theme"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/yearTextViewHistoryId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="2020"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/dark_blue_main_theme"
+            android:fontFamily="@font/gothic_italic"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

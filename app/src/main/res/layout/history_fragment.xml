@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/historyTitleId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Which month do you want to review?"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/gothic_bold"
+        android:textColor="@color/dark_blue_main_theme"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewHistoryFragmentId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_below="@id/historyTitleId"/>
+
+</RelativeLayout>
